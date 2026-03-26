@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { provideRouter } from '@angular/router'; // <--- Añade esto
 import { GestionReporteria } from './gestion-reporteria';
 
 describe('GestionReporteria', () => {
@@ -9,11 +9,14 @@ describe('GestionReporteria', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [GestionReporteria],
+      providers: [
+        provideRouter([]) // <--- Añade esto para solucionar el error NG0201
+      ]
     }).compileComponents();
 
     fixture = TestBed.createComponent(GestionReporteria);
     component = fixture.componentInstance;
-    await fixture.whenStable();
+    fixture.detectChanges();
   });
 
   it('should create', () => {
