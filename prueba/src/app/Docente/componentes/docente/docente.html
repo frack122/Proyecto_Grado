@@ -1,0 +1,66 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm sticky-top">
+
+  <div class="container">
+
+    <a class="navbar-brand fw-bold" routerLink="/">
+
+      <i class="bi bi-calendar3 me-2"></i>Gestión de Horarios
+
+    </a>
+
+    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMain">
+
+      <span class="navbar-toggler-icon"></span>
+
+    </button>
+
+    <div class="collapse navbar-collapse" id="navMain">
+
+      <ul class="navbar-nav ms-auto">
+
+        <li class="nav-item dropdown">
+
+          <a class="nav-link dropdown-toggle btn btn-light text-dark px-3" href="#" id="userDropdown" data-bs-toggle="dropdown">
+
+            <i class="bi bi-person-circle"></i> Mi Cuenta
+
+          </a>
+
+          <ul class="dropdown-menu dropdown-menu-end shadow border-0">
+
+            <li><a class="dropdown-item" routerLink="/perfil"><i class="bi bi-key me-2"></i>Contraseña</a></li>
+
+            <li><hr class="dropdown-divider"></li>
+
+            <li><a class="dropdown-item text-danger" href="#"><i class="bi bi-box-arrow-right me-2"></i>Salir</a></li>
+
+          </ul>
+
+        </li>
+
+      </ul>
+
+    </div>
+
+  </div>
+
+</nav>
+
+<div class="bg-light py-3 shadow-sm border-bottom">
+  <div class="container">
+    <div class="row justify-content-center g-3">
+      <div class="col-6 col-sm-4 col-md-3">
+        <button class="btn btn-jornada btn-matutino w-100 py-2 shadow-sm">
+          <i class="bi bi-brightness-high-fill me-2"></i>
+          <span class="fw-bold">Matutino</span>
+        </button>
+      </div>
+      <div class="col-6 col-sm-4 col-md-3">
+        <button class="btn btn-jornada btn-nocturno w-100 py-2 shadow-sm">
+          <i class="bi bi-moon-stars-fill me-2"></i>
+          <span class="fw-bold">Nocturno</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

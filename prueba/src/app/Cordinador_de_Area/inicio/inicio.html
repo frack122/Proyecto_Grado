@@ -1,0 +1,117 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow sticky-top py-3">
+  <div class="container">
+    <a class="navbar-brand fw-bolder fs-4 d-flex align-items-center" routerLink="/">
+      <div class="bg-primary p-2 rounded-3 me-2 d-flex shadow-sm">
+        <i class="bi bi-calendar3 text-white"></i>
+      </div>
+      <span class="tracking-tight">SISTEMA <span class="text-primary">HORARIOS</span></span>
+    </a>
+    
+    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMain">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navMain">
+      <ul class="navbar-nav ms-auto align-items-center">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle btn btn-outline-light border-0 px-4 rounded-pill" href="#" id="userDropdown" data-bs-toggle="dropdown">
+            <i class="bi bi-person-circle me-1"></i> Mi Cuenta
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end shadow-lg border-0 rounded-4 mt-3">
+            <li><a class="dropdown-item py-2" routerLink="/perfil"><i class="bi bi-shield-lock me-2 text-primary"></i>Seguridad</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item py-2 text-danger fw-bold" href="#"><i class="bi bi-box-arrow-right me-2"></i>Cerrar Sesión</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="bg-light py-5 border-bottom">
+  <div class="container text-center">
+    <h1 class="display-4 fw-black text-dark mb-2">Panel de Control</h1>
+    <p class="lead text-muted mx-auto" style="max-width: 600px;">Administre la logística académica, docentes y reportes de forma centralizada y eficiente.</p>
+  </div>
+</div>
+
+<div class="container py-5">
+  <div class="row g-4 row-cols-1 row-cols-md-2 row-cols-xl-3">
+    
+    <div class="col">
+      <div class="card h-100 border-0 shadow-hover rounded-4 overflow-hidden">
+        <div class="card-body p-4">
+          <div class="icon-box bg-primary-soft text-primary mb-4">
+            <i class="bi bi-person-badge-fill fs-3"></i>
+          </div>
+          <h4 class="fw-bold mb-3 text-dark">Gestión de Usuarios</h4>
+          <p class="text-muted small mb-4">Administre el personal docente, sus credenciales de acceso y perfiles del sistema.</p>
+          <button routerLink="/agregar-profesor" class="btn btn-primary w-100 rounded-3 fw-bold py-2 shadow-sm">
+            <i class="bi bi-person-plus-fill me-2"></i>Administrar
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card h-100 border-0 shadow-hover rounded-4 overflow-hidden">
+        <div class="card-body p-4">
+          <div class="icon-box bg-success-soft text-success mb-4">
+            <i class="bi bi-journal-text fs-3"></i>
+          </div>
+          <h4 class="fw-bold mb-3 text-dark">Catálogo de Materias</h4>
+          <p class="text-muted small mb-4">Registro de asignaturas, códigos únicos y configuración de mallas curriculares.</p>
+          <button routerLink="/materia" class="btn btn-success w-100 rounded-3 fw-bold py-2 shadow-sm">
+            <i class="bi bi-plus-circle-fill me-2"></i>Gestionar
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card h-100 border-0 shadow-hover rounded-4 overflow-hidden">
+        <div class="card-body p-4">
+          <div class="icon-box bg-dark-soft text-dark mb-4">
+            <i class="bi bi-calendar-range fs-3"></i>
+          </div>
+          <h4 class="fw-bold mb-3 text-dark">Módulos Académicos</h4>
+          <p class="text-muted small mb-4">Configuración de ciclos lectivos, fechas de inicio y parámetros del semestre.</p>
+          <button routerLink="/modulo-academico" class="btn btn-dark w-100 rounded-3 fw-bold py-2 shadow-sm">
+            <i class="bi bi-gear-fill me-2"></i>Configurar
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card h-100 border-0 shadow-hover-main rounded-4 overflow-hidden border-top border-warning border-5">
+        <div class="card-body p-4">
+          <div class="icon-box bg-warning-soft text-warning mb-4">
+            <i class="bi bi-link-45deg fs-3"></i>
+          </div>
+          <h4 class="fw-bold mb-3 text-dark">Asignaciones</h4>
+          <p class="text-muted small mb-4">Vincule docentes con materias, defina aulas, niveles y periodos lectivos específicos.</p>
+          <button routerLink="/asignaciones-academicas" class="btn btn-warning text-dark w-100 rounded-3 fw-bold py-2 shadow-sm">
+            <i class="bi bi-diagram-3-fill me-2"></i>Vincular Datos
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card h-100 border-0 shadow-hover rounded-4 overflow-hidden">
+        <div class="card-body p-4">
+          <div class="icon-box bg-info-soft text-info mb-4">
+            <i class="bi bi-file-earmark-excel fs-3"></i>
+          </div>
+          <h4 class="fw-bold mb-3 text-dark">Reportería y Horarios</h4>
+          <p class="text-muted small mb-4">Visualice el cronograma completo y exporte los reportes en formatos Excel o PDF.</p>
+          <button routerLink="/gestion-reporteria" class="btn btn-info text-white w-100 rounded-3 fw-bold py-2 shadow-sm">
+            <i class="bi bi-eye-fill me-2"></i>Ver Reportes
+          </button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

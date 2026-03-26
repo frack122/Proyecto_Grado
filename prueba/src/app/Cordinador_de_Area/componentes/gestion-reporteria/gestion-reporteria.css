@@ -1,0 +1,42 @@
+/* Fondos y Bordes */
+.custom-group .form-select, 
+.custom-group .form-control, 
+.custom-group .input-group-text {
+    height: 50px;
+    border-color: #e2e8f0;
+    background-color: #f8fafc;
+}
+
+.custom-group .input-group-text {
+    padding-left: 1.2rem;
+    padding-right: 0.8rem;
+}
+
+/* Foco animado */
+.form-control:focus, .form-select:focus {
+    background-color: #ffffff !important;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1) !important;
+}
+
+/* Botón Principal */
+.btn-primary {
+    background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(37, 99, 235, 0.3) !important;
+}
+
+/* Animación de entrada */
+.card {
+    animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}

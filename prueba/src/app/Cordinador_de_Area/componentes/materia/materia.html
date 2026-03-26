@@ -1,0 +1,66 @@
+<div class="container mt-5 mb-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6 col-lg-5">
+      
+      <div class="card shadow-lg border-0 rounded-4 overflow-hidden">
+        <div class="card-header bg-dark text-white p-4 border-0">
+          <div class="d-flex align-items-center">
+            <div class="bg-primary bg-gradient p-2 rounded-3 me-3 shadow">
+              <i class="bi bi-journal-plus fs-4 text-white"></i>
+            </div>
+            <div>
+              <h4 class="mb-0 fw-bold">Registrar Materia</h4>
+              <small class="text-white-50">Configuración del catálogo académico</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-body p-4 p-md-5 bg-white">
+          <form #f="ngForm" (ngSubmit)="guardar(f)" class="row g-4">
+            
+            <div class="col-12">
+              <label class="form-label fw-bold text-dark small text-uppercase">Código</label>
+              <div class="input-group custom-group">
+                <span class="input-group-text bg-white border-end-0"><i class="bi bi-hash text-primary"></i></span>
+                <input type="text" class="form-control border-start-0 ps-0 shadow-none" 
+                       name="Codigomateria" ngModel required placeholder="Ej: INF-202">
+              </div>
+            </div>
+
+            <div class="col-12">
+              <label class="form-label fw-bold text-dark small text-uppercase">Nombre de la Asignatura</label>
+              <div class="input-group custom-group">
+                <span class="input-group-text bg-white border-end-0"><i class="bi bi-book text-primary"></i></span>
+                <input type="text" class="form-control border-start-0 ps-0 shadow-none" 
+                       name="Nombremateria" ngModel required placeholder="Ej: Estructura de Datos">
+              </div>
+            </div>
+
+            <div class="col-md-7">
+              <label class="form-label fw-bold text-dark small text-uppercase">Créditos Académicos</label>
+              <div class="input-group custom-group">
+                <span class="input-group-text bg-white border-end-0"><i class="bi bi-star-fill text-warning"></i></span>
+                <input type="number" class="form-control border-start-0 ps-0 shadow-none" 
+                       name="creditos" ngModel required min="1" placeholder="Cantidad">
+              </div>
+            </div>
+
+            <div class="col-12 mt-5">
+              <div class="d-grid gap-2">
+                <button type="submit" class="btn btn-primary btn-lg fw-bold shadow-sm rounded-3 py-3" 
+                        [disabled]="!f.valid">
+                  <i class="bi bi-plus-circle me-2"></i> Guardar Materia
+                </button>
+                <button type="button" class="btn btn-link text-decoration-none text-secondary mt-2" (click)="irPagina()">
+                  <i class="bi bi-arrow-left-short me-1"></i> Volver al panel principal
+                </button>
+              </div>
+            </div>
+
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

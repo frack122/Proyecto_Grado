@@ -1,0 +1,39 @@
+/* Estilo de la Tarjeta */
+.feature-card {
+  background: white;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0,0,0,0.05);
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1) !important;
+}
+
+/* El círculo del icono */
+.feature-icon-wrapper {
+  width: 65px;
+  height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(25, 135, 84, 0.2);
+}
+
+/* Botón personalizado */
+.btn-success {
+  border-radius: 10px;
+  transition: all 0.2s;
+}
+
+.btn-success:hover {
+  background-color: #157347;
+  transform: scale(1.02);
+}
+
+/* Fondo de la página para que resalte la tarjeta */
+body {
+  background-color: #f8f9fa;
+}

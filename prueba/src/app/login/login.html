@@ -1,0 +1,20 @@
+<div class="form-signin">
+  <form (submit)="onLogin($event)" [formGroup]="loginForm">
+    <img class="mb-4" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREsGSYTtOWBhILtROtjAe7o7sEBt_HIbOZRg&s" alt="Logo" width="300">
+    <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+
+    <div class="form-floating mb-2">
+      <input type="email" class="form-control" formControlName="email" id="floatingInput" placeholder="name@example.com">
+      <label for="floatingInput">Email address</label>
+    </div>
+
+    <div class="form-floating mb-3">
+      <input [type]="hide() ? 'password' : 'text'" class="form-control" formControlName="password" id="floatingPassword" placeholder="Password">
+      <label for="floatingPassword">Password</label>
+      <small (click)="clickEvent($event)" style="cursor: pointer; color: blue; font-size: 12px;">Mostrar/Ocultar</small>
+    </div>
+
+    <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
+    <p class="mt-5 mb-3 text-muted">&copy; 2026 – Gestión de Horarios</p>
+  </form>
+</div>

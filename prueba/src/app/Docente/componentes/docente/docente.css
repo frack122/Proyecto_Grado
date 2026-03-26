@@ -1,0 +1,102 @@
+/* --- NAVBAR CUSTOM --- */
+.bg-primary {
+  background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%) !important;
+}
+
+.navbar-brand {
+  letter-spacing: 0.5px;
+  font-size: 1.3rem;
+}
+
+/* El botón de "Mi Cuenta" dentro de la navbar */
+.navbar .btn-light {
+  border-radius: 50px;
+  font-weight: 600;
+  border: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.navbar .btn-light:hover {
+  background-color: #f8f9fa;
+  transform: scale(1.05);
+}
+
+/* Dropdown moderno */
+.dropdown-menu {
+  border-radius: 12px;
+  margin-top: 15px !important;
+  border: 1px solid rgba(0,0,0,0.05);
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- CONTENEDOR DE BOTONES --- */
+.bg-light.py-3 {
+  background-color: #f1f5f9 !important; /* Un gris azulado muy suave */
+}
+
+/* Estilo base de los botones de jornada */
+.btn-jornada {
+  border-radius: 12px;
+  border: 2px solid transparent;
+  padding: 12px !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* BOTÓN MATUTINO (Sol/Día) */
+.btn-matutino {
+  background-color: #ffffff;
+  color: #d97706; /* Color ámbar/oro */
+  border-color: #fde68a;
+}
+
+.btn-matutino i {
+  color: #f59e0b;
+  font-size: 1.2rem;
+}
+
+.btn-matutino:hover {
+  background-color: #fffbeb;
+  border-color: #f59e0b;
+  color: #92400e;
+  transform: translateY(-4px);
+  box-shadow: 0 10px 15px -3px rgba(245, 158, 11, 0.2);
+}
+
+/* BOTÓN NOCTURNO (Luna/Noche) */
+.btn-nocturno {
+  background-color: #ffffff;
+  color: #1e3a8a; /* Azul noche */
+  border-color: #bfdbfe;
+}
+
+.btn-nocturno i {
+  color: #3b82f6;
+  font-size: 1.2rem;
+}
+
+.btn-nocturno:hover {
+  background-color: #eff6ff;
+  border-color: #2563eb;
+  color: #1e3a8a;
+  transform: translateY(-4px);
+  box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.2);
+}
+
+/* Efecto activo (Si quieres usar una clase .active con JS) */
+.btn-jornada.active {
+  background-color: #2563eb !important;
+  color: white !important;
+}
+
+.btn-jornada.active i {
+  color: white !important;
+}

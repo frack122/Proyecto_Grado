@@ -1,0 +1,67 @@
+<div class="container mt-5">
+  <div class="card shadow-lg border-0 rounded-4 overflow-hidden">
+    <div class="card-header bg-dark text-white p-3 bg-gradient">
+      <h4 class="mb-0"><i class="bi bi-person-plus-fill me-2"></i>Agregar Asignación</h4>
+    </div>
+    <div class="card-body p-4">
+      <form (ngSubmit)="agregarAsignacion()" #f="ngForm" class="row g-3">
+
+       <div class="col-md-6">
+  <label class="form-label fw-bold small text-uppercase">Docente Responsable</label>
+  <div class="input-group">
+    <span class="input-group-text bg-light border-end-0"><i class="bi bi-person-badge text-primary"></i></span>
+    <select class="form-select border-start-0 ps-0 shadow-none" 
+            [(ngModel)]="nuevaAsignacion.cedulaDocente" name="cedulaDocente" required>
+      <option value="" disabled selected>Seleccione Cédula...</option>
+      <option *ngFor="let u of listaDocentes" [value]="u.cedula">
+        {{ u.cedula }} - {{ u.nombreCompleto }}
+      </option>
+    </select>
+  </div>
+</div>
+
+<div class="col-md-6">
+  <label class="form-label fw-bold small text-uppercase">Materia / Asignatura</label>
+  <div class="input-group">
+    <span class="input-group-text bg-light border-end-0"><i class="bi bi-book text-primary"></i></span>
+    <select class="form-select border-start-0 ps-0 shadow-none" 
+            [(ngModel)]="nuevaAsignacion.codigomateria" name="codigomateria" required>
+      <option value="" disabled selected>Seleccione Código...</option>
+      <option *ngFor="let m of listaMaterias" [value]="m.codigo">
+        {{ m.codigo }} - {{ m.nombre }}
+      </option>
+    </select>
+  </div>
+</div>
+
+        <div class="col-md-4">
+          <label class="form-label fw-bold small text-uppercase">Periodo Lectivo</label>
+          <input type="text" class="form-control" [(ngModel)]="nuevaAsignacion.periodoLectivo" name="periodoLectivo" placeholder="Ej: 2024-1">
+        </div>
+
+        <div class="col-md-4">
+          <label class="form-label fw-bold small text-uppercase">Aula</label>
+          <input type="text" class="form-control" [(ngModel)]="nuevaAsignacion.aula" name="aula">
+        </div>
+
+        <div class="col-md-4">
+          <label class="form-label fw-bold small text-uppercase">Carrera</label>
+          <input type="text" class="form-control" [(ngModel)]="nuevaAsignacion.carrera" name="carrera">
+        </div>
+
+        <div class="col-md-4">
+          <label class="form-label fw-bold small text-uppercase">Nivel</label>
+          <input type="text" class="form-control" [(ngModel)]="nuevaAsignacion.nivel" name="nivel">
+        </div>
+
+        <div class="col-12 mt-4">
+          <button type="submit" class="btn btn-primary btn-lg w-100 fw-bold shadow-sm" [disabled]="!f.valid">
+            <i class="bi bi-check-circle-fill me-2"></i> Registrar Asignación
+          </button>
+        </div>
+
+      </form>
+    </div>
+  </div>
+
+  </div>

@@ -1,0 +1,28 @@
+/* Bordes suaves y focus elegante */
+.custom-group .form-control, 
+.custom-group .input-group-text {
+  border-color: #e2e8f0;
+  height: 48px;
+}
+
+.custom-group .form-control:focus {
+  border-color: #3b82f6;
+  background-color: #fff !important;
+}
+
+/* Efecto hover en el botón de guardar */
+.btn-primary {
+  background: linear-gradient(135deg, #0d6efd 0%, #004bb5 100%);
+  border: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-primary:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 15px rgba(13, 110, 253, 0.3) !important;
+}
+
+/* Letras de labels más separadas */
+.uppercase {
+  letter-spacing: 0.5px;
+}

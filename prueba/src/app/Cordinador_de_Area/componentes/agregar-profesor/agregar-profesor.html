@@ -1,0 +1,115 @@
+<div class="container mt-5 mb-5">
+  <div class="row justify-content-center">
+    <div class="col-lg-10">
+      <div class="card shadow-lg border-0 rounded-4">
+        <div class="card-header bg-primary bg-gradient text-white py-4 px-4 rounded-top-4">
+          <div class="d-flex align-items-center">
+            <div class="bg-white p-2 rounded-circle me-3 shadow-sm">
+              <i class="bi bi-person-plus-fill text-primary fs-4"></i>
+            </div>
+            <div>
+              <h3 class="mb-0 fw-bold">Registro de Usuario</h3>
+              <p class="mb-0 opacity-75 small">Complete la información para dar de alta al nuevo personal</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-body p-4 p-md-5">
+          <form #f="ngForm" (ngSubmit)="guardar(f)" class="row g-4">
+            
+            <div class="col-12 border-bottom pb-2">
+              <h5 class="text-primary fw-bold small text-uppercase">1. Datos Personales</h5>
+            </div>
+
+            <div class="col-md-4">
+              <label class="form-label fw-semibold">Cédula</label>
+              <div class="input-group">
+                <span class="input-group-text bg-light"><i class="bi bi-card-text"></i></span>
+                <input name="cedula" ngModel class="form-control" placeholder="0000000000" required>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <label class="form-label fw-semibold">Nombre</label>
+              <input name="nombre" ngModel class="form-control" placeholder="Ej: Juan" required>
+            </div>
+
+            <div class="col-md-4">
+              <label class="form-label fw-semibold">Apellido</label>
+              <input name="apellido" ngModel class="form-control" placeholder="Ej: Pérez" required>
+            </div>
+
+            <div class="col-md-4">
+              <label class="form-label fw-semibold">Teléfono</label>
+              <div class="input-group">
+                <span class="input-group-text bg-light"><i class="bi bi-telephone"></i></span>
+                <input name="telefono" ngModel class="form-control" placeholder="0999999999">
+              </div>
+            </div>
+
+            <div class="col-12 border-bottom pb-2 mt-5">
+              <h5 class="text-primary fw-bold small text-uppercase">2. Credenciales y Rol</h5>
+            </div>
+
+            <div class="col-md-6">
+              <label class="form-label fw-semibold">Correo Electrónico</label>
+              <div class="input-group">
+                <span class="input-group-text bg-light"><i class="bi bi-envelope"></i></span>
+                <input name="email" type="email" ngModel class="form-control" placeholder="usuario@dominio.com" required>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <label class="form-label fw-semibold">Contraseña</label>
+              <div class="input-group">
+                <span class="input-group-text bg-light"><i class="bi bi-lock"></i></span>
+                <input name="password" type="password" ngModel class="form-control" placeholder="••••••••" required>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <label class="form-label fw-semibold">Rol del Usuario</label>
+              <select name="roles" ngModel class="form-select border-primary-subtle" required>
+                <option value="" disabled selected>Seleccione un rol...</option>
+                <option [value]="0">Coordinador de Carrera</option>
+                <option [value]="1">Docente</option>
+                <option [value]="2">Personal Administrativo</option>
+              </select>
+            </div>
+
+            <div class="col-12 border-bottom pb-2 mt-5">
+              <h5 class="text-primary fw-bold small text-uppercase">3. Detalles Laborales</h5>
+            </div>
+
+            <div class="col-md-6">
+              <label class="form-label fw-semibold">Tipo de Jornada</label>
+              <select name="jornada" ngModel class="form-select" required>
+                <option value="" disabled selected>Seleccione jornada...</option>
+                <option [value]="0">Completa</option>
+                <option [value]="1">Parcial</option>
+                <option [value]="2">Reducida</option>
+                <option [value]="3">Nocturna</option>
+              </select>
+            </div>
+
+            <div class="col-md-6">
+              <label class="form-label fw-semibold">Fecha de Contratación</label>
+              <input type="date" name="fechaContratacion" ngModel class="form-control" required>
+            </div>
+
+            <div class="col-12 mt-5 d-flex justify-content-between align-items-center">
+              <button type="button" class="btn btn-outline-secondary px-4 rounded-3" (click)="irPagina()">
+                <i class="bi bi-arrow-left me-2"></i>Volver al Inicio
+              </button>
+              
+              <button type="submit" class="btn btn-primary btn-lg px-5 shadow rounded-3 fw-bold" [disabled]="!f.valid">
+                <i class="bi bi-check-circle me-2"></i>Guardar Usuario
+              </button>
+            </div>
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
